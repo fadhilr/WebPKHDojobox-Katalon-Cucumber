@@ -9,4 +9,24 @@
       <initValue>'https://katalon-studio-samples.github.io/calculator'</initValue>
       <name>baseUrl</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'https://pkh.dojobox.id/'</initValue>
+      <name>webPKH</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'https://admin.pkh.dojobox.id/'</initValue>
+      <name>webAdminPKH</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'te22st@gmail.com'</initValue>
+      <name>username</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'123456'</initValue>
+      <name>password</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

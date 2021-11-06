@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Insert wrong crendentials then sign in</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>b7e5be76-46e9-421a-8b6f-177cc5c21c30</testCaseGuid>
+</TestCaseEntity>
