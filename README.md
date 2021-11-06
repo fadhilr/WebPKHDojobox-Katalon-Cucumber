@@ -1,4 +1,4 @@
-# Calculator BDD Testing Samples
+# Web PKHDojobox Katalon cucumber BDD Testing Samples
 See https://docs.katalon.com/katalon-studio/docs/bdd-samples.html.
 
 ## Companion products
