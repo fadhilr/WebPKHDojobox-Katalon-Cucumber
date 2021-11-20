@@ -17,9 +17,7 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.click(findTestObject('WebAdminPKH/Page_Admin PKH/Facilitator page/a_Facilitator'))
+WebUI.click(findTestObject('WebAdminPKH/Page_Admin PKH/Facilitator page/i_Aktif_fas fa-ellipsis-v'))
 
-WebUI.verifyElementVisible(findTestObject('WebAdminPKH/Page_Admin PKH/Facilitator page/b_Facilitator'))
-
-WebUI.verifyElementText(findTestObject('WebAdminPKH/Page_Admin PKH/Facilitator page/b_Facilitator'), 'Facilitator')
+WebUI.click(findTestObject('WebAdminPKH/Page_Admin PKH/Facilitator page/a_Lihat'))
 

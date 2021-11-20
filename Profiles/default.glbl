@@ -29,4 +29,9 @@
       <initValue>'123456'</initValue>
       <name>password</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>tempEmail</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

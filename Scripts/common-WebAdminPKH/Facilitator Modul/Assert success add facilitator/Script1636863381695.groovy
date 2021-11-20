@@ -17,9 +17,12 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+WebUI.verifyElementVisible(findTestObject('WebAdminPKH/Page_Admin PKH/Tambah page/h5_Success'))
+
+WebUI.verifyElementText(findTestObject('WebAdminPKH/Page_Admin PKH/Tambah page/div_Penambahan fasilitator berhasil diproses'), 
+    'Penambahan fasilitator berhasil diproses')
+
+WebUI.click(findTestObject('WebAdminPKH/Page_Admin PKH/Tambah page/button_OK'))
+
 WebUI.click(findTestObject('WebAdminPKH/Page_Admin PKH/Facilitator page/a_Facilitator'))
-
-WebUI.verifyElementVisible(findTestObject('WebAdminPKH/Page_Admin PKH/Facilitator page/b_Facilitator'))
-
-WebUI.verifyElementText(findTestObject('WebAdminPKH/Page_Admin PKH/Facilitator page/b_Facilitator'), 'Facilitator')
 

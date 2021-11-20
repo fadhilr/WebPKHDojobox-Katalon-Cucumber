@@ -12,7 +12,7 @@ Feature: Facilitator feature
       | username     | password |
       | e@dojobox.id | admin    |
 
-  Scenario Outline: User can see detail facilitator 
+  Scenario Outline: User can see list facilitator
     Given User already on page facilitator
     When User click modul facilitator and input field search with <name>
     Then User should see data list facilitator that have <name> and <email>
@@ -21,7 +21,31 @@ Feature: Facilitator feature
       | name             | email                    |
       | Fadhil Rizqullah | fadilrizqullah@gmail.com |
 
-  Scenario Outline: User can see list facilitator in page facilitator
+  Scenario Outline: User can see detail facilitator
     Given User already on page facilitator
     When User click modul facilitator and input field search with <name>
-    Then User should see data list facilitator that have <name> and <email>
+    And click detail button
+    Then User should see data detail facilitator that have <name> and <email>
+
+    Examples: 
+      | name             | email                    |
+      | Fadhil Rizqullah | fadilrizqullah@gmail.com |
+
+  Scenario Outline: User can add new facilitator
+    Given User already on page facilitator
+    When User click button tambah facilitator
+    And Input data facilitator with <name>, <email>, <status>, <password>, <provinsi>, <kota>, <kecamatan>, <alamat> then save
+    Then User should see data success add new facilitator pop up
+
+    Examples: 
+      | name       | email | status | password | provinsi | kota        | kecamatan | alamat     |
+      | Create tes | tes   | Aktif  |     1234 | PAPUA    | KOTA SORONG | Sorong    | Jl. Sorong |
+  #Scenario Outline: User can edit facilitator
+    #Given User already on page facilitator
+    #When User search facilitator <name>
+    #And Edit data facilitator with <name>, <email>, <status>, <password>, <provinsi>, <kota>, <kecamatan>, <alamat> then save
+    #Then User should see data success add new facilitator pop up
+#
+    #Examples: 
+      #| name             | email                    | status | password | provinsi | kota        | kecamatan | alamat     |
+      #| Fadhil Rizqullah | fadilrizqullah@gmail.com | Aktif  |     1234 | PAPUA    | KOTA SORONG | Sorong    | Jl. Sorong |

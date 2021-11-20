@@ -17,6 +17,6 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.verifyElementText(findTestObject('WebAdminPKH/Page_Admin PKH/Facilitator/td_Fadhil Rizqullah'), name.toString(), FailureHandling.STOP_ON_FAILURE)
+WebUI.verifyElementText(findTestObject('WebAdminPKH/Page_Admin PKH/Facilitator page/td_Fadhil Rizqullah'), name.toString(), FailureHandling.STOP_ON_FAILURE)
 
-WebUI.verifyElementText(findTestObject('WebAdminPKH/Page_Admin PKH/Facilitator/td_fadilrizqullahgmail.com'), email.toString())
+WebUI.verifyElementText(findTestObject('WebAdminPKH/Page_Admin PKH/Facilitator page/td_fadilrizqullahgmail.com'), email.toString())

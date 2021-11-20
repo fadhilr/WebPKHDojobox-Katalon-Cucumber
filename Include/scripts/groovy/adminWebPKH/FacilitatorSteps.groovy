@@ -61,4 +61,34 @@ class FacilitatorSteps {
 	def User_should_see_data_list_facilitator_that_have_email(String name, String email) {
 		WebUI.callTestCase(findTestCase("Test Cases/common-WebAdminPKH/Facilitator Modul/Assert list facilitator by search name"), [ ('name') : name, ('email') : email ], FailureHandling.STOP_ON_FAILURE)
 	}
+	//see detail facil
+
+	@When("click detail button")
+	def click_detail_button() {
+		WebUI.callTestCase(findTestCase("Test Cases/common-WebAdminPKH/Facilitator Modul/Click detail button"), [:], FailureHandling.STOP_ON_FAILURE)
+	}
+
+	@Then("User should see data detail facilitator that have (.*) and (.*)")
+	def User_should_see_data_detail_facilitator_that_have_name_and_email(String name, String email) {
+		WebUI.callTestCase(findTestCase("Test Cases/common-WebAdminPKH/Facilitator Modul/Assert detail page"), [ ('name') : name, ('email') : email ], FailureHandling.STOP_ON_FAILURE)
+	}
+	//add new facilitator
+
+
+	@When("User click button tambah facilitator")
+	def User_click_button_tambah_facilitator() {
+		WebUI.callTestCase(findTestCase("Test Cases/common-WebAdminPKH/Facilitator Modul/Click tambah button"), [:], FailureHandling.STOP_ON_FAILURE)
+	}
+
+	@When("Input data facilitator with (.*), (.*), (.*), (.*), (.*), (.*), (.*), (.*) then save")
+	def Input_data_facilitator(String name, String email, String status, String password, String provinsi, String kota, String kecamatan, String alamat) {
+		WebUI.callTestCase(findTestCase("Test Cases/common-WebAdminPKH/Facilitator Modul/Input data new facilitator"),
+				[ ('name') : name, ('email') : email, ('status') : status, ('password') : password, ('provinsi') : provinsi, ('kota') : kota, ('kecamatan') : kecamatan, ('alamat') : alamat ],
+				FailureHandling.STOP_ON_FAILURE)
+	}
+
+	@Then("User should see data success add new facilitator pop up")
+	def User_should_see_data_success_add_new_facilitator_pop_up() {
+		WebUI.callTestCase(findTestCase("Test Cases/common-WebAdminPKH/Facilitator Modul/Assert success add facilitator"), [:], FailureHandling.STOP_ON_FAILURE)
+	}
 }
