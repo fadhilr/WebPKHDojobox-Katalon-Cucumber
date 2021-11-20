@@ -16,31 +16,12 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-import java.text.SimpleDateFormat as SimpleDateFormat
-import java.util.Date as Date
-
-//Date now = new Date()
-//DateTime dateTime = new DateTime()
-//
-//Calendar calendar = Calendar.getInstance()
-//
-//calendar.setTime(now)
-//
-//int yearNow = calendar.get(Calendar.YEAR)
-//
-//int monthNow = calendar.get(Calendar.MONTH)
-//
-//int dayNow = calendar.get(Calendar.DAY_OF_MONTH)
-//String dateNow = getCurrentDateTime('GMT+7','dd-MM-yyyy hh:mm:ss')
-//def timestamp = new Date().format('YYYY-MM-dd HH:mm:ss')
-//def emailRandom = (email + timestamp) + '@gmail.com'
 
 WebUI.setText(findTestObject('WebAdminPKH/Page_Admin PKH/Tambah page/input_Nama Fasilitator_user_fullname'), name.toString())
 
-WebUI.setText(findTestObject('WebAdminPKH/Page_Admin PKH/Tambah page/input_Email_user_email'), email.toString())
+//WebUI.setText(findTestObject('WebAdminPKH/Page_Admin PKH/Tambah page/input_Email_user_email'), email.toString())
 
 //GlobalVariable.tempEmail
-
 WebUI.selectOptionByLabel(findTestObject('WebAdminPKH/Page_Admin PKH/Tambah page/select_AktifNonaktif'), status.toString(), 
     false)
 
@@ -57,12 +38,11 @@ WebUI.selectOptionByLabel(findTestObject('WebAdminPKH/Page_Admin PKH/Tambah page
 
 WebUI.setText(findTestObject('WebAdminPKH/Page_Admin PKH/Tambah page/textarea_Alamat Lengkap_user_address'), alamat.toString())
 
-WebUI.uploadFile(findTestObject('WebAdminPKH/Page_Admin PKH/Tambah page/div_Foto Profil_drop-zone'), 
-	'H:/Fadil/Dojobox/PKHDojobox-Katalon/Data Files/FC_Internazionale_Milano_2021.svg.png')
+WebUI.uploadFile(findTestObject('WebAdminPKH/Page_Admin PKH/Tambah page/div_Foto Profil_drop-zone'), 'H:/Fadil/Dojobox/PKHDojobox-Katalon/Data Files/FC_Internazionale_Milano_2021.svg.png')
 
 WebUI.click(findTestObject('WebAdminPKH/Page_Admin PKH/Tambah page/label_Gunakan alamat domisili diatas sebagai alamat penugasan'))
 
-WebUI.click(findTestObject('WebAdminPKH/Page_Admin PKH/Tambah page/button_Simpan'))
+WebUI.click(findTestObject('WebAdminPKH/Page_Admin PKH/Facilitator page/button_Edit'))
 
 WebUI.delay(3)
 

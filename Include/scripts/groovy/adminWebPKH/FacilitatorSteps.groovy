@@ -53,8 +53,8 @@ class FacilitatorSteps {
 	}
 
 	@When("User click modul facilitator and input field search with (.*)")
-	def User_click_modul_facilitator_and_input_field_search_with_name(String name) {
-		WebUI.callTestCase(findTestCase("Test Cases/common-WebAdminPKH/Facilitator Modul/Click modul facilitator"), [ ('name') : name ], FailureHandling.STOP_ON_FAILURE)
+	def User_click_modul_facilitator_and_input_field_search_with_name(String email) {
+		WebUI.callTestCase(findTestCase("Test Cases/common-WebAdminPKH/Facilitator Modul/Click modul facilitator"), [ ('email') : email ], FailureHandling.STOP_ON_FAILURE)
 	}
 
 	@Then("User should see data list facilitator that have (.*) and (.*)")
@@ -79,9 +79,12 @@ class FacilitatorSteps {
 	def User_click_button_tambah_facilitator() {
 		WebUI.callTestCase(findTestCase("Test Cases/common-WebAdminPKH/Facilitator Modul/Click tambah button"), [:], FailureHandling.STOP_ON_FAILURE)
 	}
+	def timestamp = new Date().format('YYYY-MM-dd HH:mm:ss')
+	def final email = ('tes' + timestamp) + '@gmail.com'
 
-	@When("Input data facilitator with (.*), (.*), (.*), (.*), (.*), (.*), (.*), (.*) then save")
-	def Input_data_facilitator(String name, String email, String status, String password, String provinsi, String kota, String kecamatan, String alamat) {
+	@When("Input data facilitator with (.*), (.*), (.*), (.*), (.*), (.*), (.*) then save")
+	def Input_data_facilitator(String name, String status, String password, String provinsi, String kota, String kecamatan, String alamat) {
+
 		WebUI.callTestCase(findTestCase("Test Cases/common-WebAdminPKH/Facilitator Modul/Input data new facilitator"),
 				[ ('name') : name, ('email') : email, ('status') : status, ('password') : password, ('provinsi') : provinsi, ('kota') : kota, ('kecamatan') : kecamatan, ('alamat') : alamat ],
 				FailureHandling.STOP_ON_FAILURE)
@@ -90,5 +93,25 @@ class FacilitatorSteps {
 	@Then("User should see data success add new facilitator pop up")
 	def User_should_see_data_success_add_new_facilitator_pop_up() {
 		WebUI.callTestCase(findTestCase("Test Cases/common-WebAdminPKH/Facilitator Modul/Assert success add facilitator"), [:], FailureHandling.STOP_ON_FAILURE)
+	}
+	//edit new facilitator
+
+
+	@When("User search new facilitator by (.*)")
+	def User_search_new_facilitator(String email) {
+		WebUI.callTestCase(findTestCase("Test Cases/common-WebAdminPKH/Facilitator Modul/Search new facilitator"), ['email':email], FailureHandling.STOP_ON_FAILURE)
+	}
+
+	@When("Edit data facilitator with (.*), (.*), (.*), (.*), (.*), (.*), (.*) then save")
+	def Edit_data_facilitator(String name, String status, String password, String provinsi, String kota, String kecamatan, String alamat) {
+
+		WebUI.callTestCase(findTestCase("Test Cases/common-WebAdminPKH/Facilitator Modul/Edit data new facilitator"),
+				[ ('name') : name, ('status') : status, ('password') : password, ('provinsi') : provinsi, ('kota') : kota, ('kecamatan') : kecamatan, ('alamat') : alamat ],
+				FailureHandling.STOP_ON_FAILURE)
+	}
+
+	@Then("User should see pop up success edit data")
+	def User_should_see_pop_up_success_edit() {
+		WebUI.callTestCase(findTestCase("Test Cases/common-WebAdminPKH/Facilitator Modul/Assert success edit facilitator"), [:], FailureHandling.STOP_ON_FAILURE)
 	}
 }

@@ -17,9 +17,9 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.verifyElementVisible(findTestObject('WebAdminPKH/Page_Admin PKH/Facilitator page/div_Tambah Facilitator'))
-
-WebUI.click(findTestObject('WebAdminPKH/Page_Admin PKH/Facilitator page/a_Facilitator'))
-
 WebUI.setText(findTestObject('WebAdminPKH/Page_Admin PKH/Facilitator page/input_Search_form-control form-control-sm'), email.toString())
+
+WebUI.click(findTestObject('WebAdminPKH/Page_Admin PKH/Facilitator page/button_Aktif_btn bg-transparent dropdown-toggle'))
+
+WebUI.click(findTestObject('WebAdminPKH/Page_Admin PKH/Facilitator page/a_Ubah'))
 

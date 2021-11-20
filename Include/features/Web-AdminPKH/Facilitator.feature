@@ -13,39 +13,39 @@ Feature: Facilitator feature
       | e@dojobox.id | admin    |
 
   Scenario Outline: User can see list facilitator
-    Given User already on page facilitator
-    When User click modul facilitator and input field search with <name>
-    Then User should see data list facilitator that have <name> and <email>
-
-    Examples: 
-      | name             | email                    |
-      | Fadhil Rizqullah | fadilrizqullah@gmail.com |
-
+  Given User already on page facilitator
+  When User click modul facilitator and input field search with <email>
+  Then User should see data list facilitator that have <name> and <email>
+  
+  Examples:
+  | name             | email                    |
+  | Fadhil Rizqullah | fadilrizqullah@gmail.com |
+  
   Scenario Outline: User can see detail facilitator
-    Given User already on page facilitator
-    When User click modul facilitator and input field search with <name>
-    And click detail button
-    Then User should see data detail facilitator that have <name> and <email>
-
-    Examples: 
-      | name             | email                    |
-      | Fadhil Rizqullah | fadilrizqullah@gmail.com |
-
+  Given User already on page facilitator
+  When User click modul facilitator and input field search with <name>
+  And click detail button
+  Then User should see data detail facilitator that have <name> and <email>
+  
+  Examples:
+  | name             | email                    |
+  | Fadhil Rizqullah | fadilrizqullah@gmail.com |
   Scenario Outline: User can add new facilitator
     Given User already on page facilitator
     When User click button tambah facilitator
-    And Input data facilitator with <name>, <email>, <status>, <password>, <provinsi>, <kota>, <kecamatan>, <alamat> then save
+    And Input data facilitator with <name>, <status>, <password>, <provinsi>, <kota>, <kecamatan>, <alamat> then save
     Then User should see data success add new facilitator pop up
 
     Examples: 
-      | name       | email | status | password | provinsi | kota        | kecamatan | alamat     |
-      | Create tes | tes   | Aktif  |     1234 | PAPUA    | KOTA SORONG | Sorong    | Jl. Sorong |
-  #Scenario Outline: User can edit facilitator
-    #Given User already on page facilitator
-    #When User search facilitator <name>
-    #And Edit data facilitator with <name>, <email>, <status>, <password>, <provinsi>, <kota>, <kecamatan>, <alamat> then save
-    #Then User should see data success add new facilitator pop up
-#
-    #Examples: 
-      #| name             | email                    | status | password | provinsi | kota        | kecamatan | alamat     |
-      #| Fadhil Rizqullah | fadilrizqullah@gmail.com | Aktif  |     1234 | PAPUA    | KOTA SORONG | Sorong    | Jl. Sorong |
+      | name       | status | password | provinsi | kota        | kecamatan | alamat     |
+      | Create tes | Aktif  |     1234 | PAPUA    | KOTA SORONG | Sorong    | Jl. Sorong |
+
+  Scenario Outline: User can edit facilitator
+    Given User already on page facilitator
+    When User search new facilitator by <email>
+    And Edit data facilitator with <name>, <status>, <password>, <provinsi>, <kota>, <kecamatan>, <alamat> then save
+    Then User should see pop up success edit data
+
+    Examples: 
+      | name             | email                    | status   | password | provinsi | kota       | kecamatan  | alamat    |
+      | Fadhil Rizqullah | fadilrizqullah@gmail.com | Nonaktif |     1234 | RIAU     | KOTA DUMAI | Dumai Kota | Jl. Dumai |
