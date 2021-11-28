@@ -17,4 +17,4 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-CucumberKW.runFeatureFile('Include/features/Web-AdminPKH/TempRun.feature')
+WebUI.verifyElementText(findTestObject('Object Repository/WebAdminPKH/Page_Admin PKH/Category page/td_Badminton'), title.toString())

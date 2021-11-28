@@ -34,4 +34,14 @@
       <initValue>''</initValue>
       <name>tempEmail</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>tempMainCat</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>tempSubCat</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>
